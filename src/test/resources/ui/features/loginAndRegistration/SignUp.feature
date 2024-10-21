@@ -1,4 +1,3 @@
-@Registration
 Feature: Sign up
 
   Background:

@@ -79,12 +79,12 @@ public class Driver {
     }
 
     public static void takeScreenshot(Scenario scenario) {
-        if (scenario.isFailed()) {
+       // if (scenario.isFailed()) {
             //taking screenshot
             final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
             //adding screenshot to reports
             scenario.attach(screenshot, "image/png", "screenshot");
-        }
+        //}
     }
 
     public static void closeDriver() {

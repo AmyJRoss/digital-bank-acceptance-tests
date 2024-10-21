@@ -23,7 +23,7 @@ public class Hooks {
         DBUtils.establishConnection();
     }
 
-    @After("not @Registration")
+    @After()
     public void tearDown(Scenario scenario) {
         Driver.takeScreenshot(scenario);
         Driver.closeDriver();
