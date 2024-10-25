@@ -8,11 +8,11 @@ Feature: Sign up
   Scenario: Positive. As new user I want to successfully create Digital Bank account
     When the user creates account with following fields
       | title | firstName | lastName | gender | dateOfBirth | ssn         | email                    | password     | confirmPassword | address        | locality | region | postalCode | country | homePhone       | mobilePhone | workPhone | agreeToTerms |
-      | Ms.   | Morgan    | Freeman  | M      | 11/11/1970  | 122-22-9487 | morganfree1170@gmail.com | Freeman1970$ | Freeman1970$    | 123 Wolf Drive | Hartford | CO     | 90082      | USA     | (234) 111- 2233 |             |           | true         |
+      | Ms.   | Morgan    | Freeman  | M      | 11/11/1970  | 122-22-9807 | morganfree1170@gmail.com | Freeman1970$ | Freeman1970$    | 123 Wolf Drive | Hartford | CO     | 90082      | USA     | (234) 111- 2233 |             |           | true         |
     Then the user should be displayed with the message "Registration Successful. Please Login."
     Then the following user info should be saved in the db
       | title | firstName | lastName | gender | dateOfBirth | ssn         | email                    | password     | confirmPassword | address        | locality | region | postalCode | country | homePhone       | mobilePhone | workPhone |accountNonExpired|accountNonLocked|credentialsNonExpired|enabled|
-      | Ms.   | Morgan    | Freeman  | M      | 11/11/1970  | 122-22-9487 | morganfree1170@gmail.com | Freeman1970$ | Freeman1970$    | 123 Wolf Drive | Hartford | CO     | 90082      | USA     | (234) 111- 2233 |             |           |true             |true            |true                 |true   |
+      | Ms.   | Morgan    | Freeman  | M      | 11/11/1970  | 122-22-9807 | morganfree1170@gmail.com | Freeman1970$ | Freeman1970$    | 123 Wolf Drive | Hartford | CO     | 90082      | USA     | (234) 111- 2233 |             |           |true             |true            |true                 |true   |
 
 
   Scenario Outline:  Negative test cases. As a Digital Bank admin I want to make sure users can't register without providing all valid data
