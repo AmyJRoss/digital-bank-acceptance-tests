@@ -146,7 +146,9 @@ public class SignUpPage extends BasePage {
         }
     }
 
-    public String getMessage() {
+    public String getMessage(WebDriver driver) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.visibilityOf(successMessage));
         return successMessage.getText();
     }
 

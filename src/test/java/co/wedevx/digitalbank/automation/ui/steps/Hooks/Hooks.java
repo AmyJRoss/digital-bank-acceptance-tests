@@ -1,5 +1,6 @@
 package co.wedevx.digitalbank.automation.ui.steps.Hooks;
 
+import co.wedevx.digitalbank.automation.ui.utils.ConfigReader;
 import co.wedevx.digitalbank.automation.ui.utils.DBUtils;
 import co.wedevx.digitalbank.automation.ui.utils.Driver;
 import io.cucumber.java.*;
@@ -15,7 +16,7 @@ public class Hooks {
 
     @Before("not @Registration")
     public void the_user_is_on_dbank_homepage() {
-        driver.get("https://dbank-qa.wedevx.co/bank/login");
+        driver.get(ConfigReader.getProperty("digitalbank.loginpageurl"));
     }
 
     @BeforeAll()

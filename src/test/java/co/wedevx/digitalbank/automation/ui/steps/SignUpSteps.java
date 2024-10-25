@@ -50,7 +50,7 @@ public class SignUpSteps {
 
     @Then("the user should be displayed with the message {string}")
     public void the_user_should_be_displayed_with_the_message(String expectedMessage) {
-        assertEquals(expectedMessage, signUpPage.getMessage(), "Success message mismatch");
+        assertEquals(expectedMessage, signUpPage.getMessage(driver), "Success message mismatch");
     }
 
     @Then("the user should see the {string} required field error message {string}")
