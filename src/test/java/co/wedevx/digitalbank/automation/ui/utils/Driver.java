@@ -60,7 +60,7 @@ public class Driver {
                     break;
             }
         }
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(360));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(600));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
         driver.manage().window().maximize();
 
